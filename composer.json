@@ -18,7 +18,7 @@
     "php": ">=7.0",
     "roave/security-advisories": "dev-master",
     "psr/container": "^1.0",
-    "http-interop/http-middleware": "0.4.1",
+    "http-interop/http-middleware": "0.4",
     "psr/link": "^1.0"
   },
   "suggest": {
