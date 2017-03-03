@@ -1,0 +1,27 @@
+{
+  "name": "onion/interfaces",
+  "description": "Package containing only the interfaces of 'onion' libraries, allowing to use code without installing the whole framework and using code written for the framework outside it",
+  "authors": [
+    {
+      "name": "Dimitar Dimitrov",
+      "email": "daghostman.dd@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Onion\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "roave/security-advisories": "dev-master",
+    "psr/container": "^1.0",
+    "http-interop/http-middleware": "0.4.1",
+    "psr/link": "^1.0"
+  },
+  "suggest": {
+    "onion/framework": "Bare-bone framework for writing decent apps",
+    "onion/rest": "Small utility for returning different REST responses"
+  }
+}
