@@ -1,4 +1,4 @@
-<?php declare(strct_types=1);
+<?php declare(strict_types=1);
 namespace Onion\Framework\Dependency\Interfaces;
 
 use Psr\Container\ContainerInterface as Container;
