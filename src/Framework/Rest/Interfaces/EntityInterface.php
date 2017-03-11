@@ -138,7 +138,14 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      *     ]
      * ]
      * ```
-     * @return EntityInterface[][]
+     * or if the relation contains only one entity
+     * ```
+     * [
+     *     'relation' => EntityInterface,
+     *     // ...
+     * ]
+     * ```
+     * @return EntityInterface[][]|EntityInterface[]
      */
     public function getEmbedded(): array;
 }
