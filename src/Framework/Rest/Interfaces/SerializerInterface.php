@@ -35,8 +35,10 @@ interface SerializerInterface
      * strategy.
      *
      * @param EntityInterface $entity Entity to serialize
+     * @param bool $isRoot Is the entity being transformed
+     *              a root node or not
      *
      * @return string Textual representation of the $entity
      */
-    public function serialize(EntityInterface $entity): string;
+    public function serialize(EntityInterface $entity, bool $isRoot = false): string;
 }
