@@ -10,4 +10,5 @@ interface RouteInterface extends HydratableInterface
     public function getMethods(): array;
     public function getPattern(): string;
     public function getDelegate(): DelegateInterface;
+    public function getParameters(): array;
 }
