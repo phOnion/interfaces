@@ -1,7 +1,6 @@
 <?php declare(strict_types=1);
 namespace Onion\Framework\Router\Interfaces;
 
-use Interop\Http\ServerMiddleware\DelegateInterface;
 use Psr\Http\Message;
 
 interface RouterInterface extends \Countable, \IteratorAggregate
@@ -20,7 +19,7 @@ interface RouterInterface extends \Countable, \IteratorAggregate
      *
      * @return array
      */
-    public function match(string $method, Message\UriInterface $uri): array;
+    public function match(string $method, Message\UriInterface $uri): RouteInterface;
 
     /**
      * Push a route in to the stack routes on which to perform the actual
@@ -28,17 +27,9 @@ interface RouterInterface extends \Countable, \IteratorAggregate
      *
      * @api
      *
-     * @param string            $pattern The http methods for which to register the route
-     * @param DelegateInterface $handler the pattern for which the route is responsible
-     * @param array             $methods The of the route
-     * @param string            $name    Name of the current route for reverse lookup
+     * @param RouteInterface $route
      *
      * @return void
      */
-    public function addRoute(
-        string $pattern,
-        DelegateInterface $handler,
-        array $methods,
-        string $name = null
-    );
+    public function addRoute(RouteInterface $route);
 }
