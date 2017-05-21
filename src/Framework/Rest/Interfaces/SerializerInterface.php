@@ -4,6 +4,8 @@ namespace Onion\Framework\Rest\Interfaces;
 use Onion\Framework\Http\Header\Interfaces\AcceptInterface;
 
 /**
+ * @deprecated
+ *
  * Interface defining the signature of every REST
  * serializer.
  *

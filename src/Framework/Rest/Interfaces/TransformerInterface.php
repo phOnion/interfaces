@@ -5,6 +5,8 @@ use Onion\Framework\Hydrator\Interfaces\HydratableInterface as Hydratable;
 use Onion\Framework\Rest\Interfaces\EntityInterface as Entity;
 
 /**
+ * @deprecated
+ *
  * The object which should is responsible for turning
  * any hydratable object in to an entity ready to be
  * serialized and returned to the requesting client
