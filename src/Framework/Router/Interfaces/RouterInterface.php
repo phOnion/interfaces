@@ -17,7 +17,7 @@ interface RouterInterface extends \Countable, \IteratorAggregate
      * @throws Exception\NotAllowedException When the matched route does not
      * support the current request method.
      *
-     * @return array
+     * @return RouteInterface
      */
     public function match(string $method, Message\UriInterface $uri): RouteInterface;
 
@@ -29,7 +29,7 @@ interface RouterInterface extends \Countable, \IteratorAggregate
      *
      * @param RouteInterface $route
      *
-     * @return void
+     * @return self
      */
-    public function addRoute(RouteInterface $route);
+    public function addRoute(RouteInterface $route): RouterInterface;
 }

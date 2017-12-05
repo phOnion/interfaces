@@ -24,9 +24,9 @@ interface MatcherInterface
      * @param string $path
      *
      *
-     * @return array List of the named parameters of the route. (Should not
+     * @return iterable List of the named parameters of the route. (Should not
      * return any integer indexes within said array, or false if it is not
      * a match)
      */
-    public function match(string $pattern, string $path): array;
+    public function match(string $pattern, string $path): iterable;
 }

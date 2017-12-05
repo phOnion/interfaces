@@ -7,8 +7,8 @@ use Onion\Framework\Hydrator\Interfaces\HydratableInterface;
 interface RouteInterface extends HydratableInterface
 {
     public function getName(): string;
-    public function getMethods(): array;
+    public function getMethods(): iterable;
     public function getPattern(): string;
     public function getDelegate(): DelegateInterface;
-    public function getParameters(): array;
+    public function getParameters(): iterable;
 }

@@ -32,10 +32,10 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      * previously set meta-data with the provided one. Must
      * be implemented in a way that preserves object immutability.
      *
-     * @param array $data The data to set
+     * @param iterable $data The data to set
      * @return EntityInterface New immutable instance
      */
-    public function withMetaData(array $data): EntityInterface;
+    public function withMetaData(iterable $data): EntityInterface;
 
     /**
      * Should be used in such a way that it will not replace
@@ -44,18 +44,18 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      *
      * Must be implemented in such a way that preserves immutability.
      *
-     * @param array $data The data to add
+     * @param iterable $data The data to add
      *
      * @return EntityInterface New immutable instance
      */
-    public function withAddedMetaData(array $data): EntityInterface;
+    public function withAddedMetaData(iterable $data): EntityInterface;
 
     /**
      * A simple getter to provide access to the meta-data
      *
-     * @return array All available meta-data for the object
+     * @return iterable All available meta-data for the object
      */
-    public function getMetaData(): array;
+    public function getMetaData(): iterable;
 
     /**
      * Add a new item to the entity data
@@ -90,11 +90,11 @@ interface EntityInterface extends EvolvableLinkProviderInterface
     /**
      * Set new data to the current entity
      *
-     * @param array $data The data to add
+     * @param iterable $data The data to add
      *
      * @return EntityInterface New immutable instance
      */
-    public function withData(array $data): EntityInterface;
+    public function withData(iterable $data): EntityInterface;
 
     /**
      * Clears any data attached to the entity
@@ -106,9 +106,9 @@ interface EntityInterface extends EvolvableLinkProviderInterface
     /**
      * Retrieve all data available in the entity
      *
-     * @return array
+     * @return iterable
      */
-    public function getData(): array;
+    public function getData(): iterable;
 
     /**
      * Attach new child item with type to the current entity,
@@ -128,7 +128,7 @@ interface EntityInterface extends EvolvableLinkProviderInterface
     public function addEmbedded(string $type, EntityInterface $entity, bool $collection = true): EntityInterface;
 
     /**
-     * Returns all attached child entities in an array like:
+     * Returns all attached child entities in an iterable like:
      * ```
      * [
      *     'relation' => [
@@ -148,5 +148,5 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      * ```
      * @return EntityInterface[][]|EntityInterface[]
      */
-    public function getEmbedded(): array;
+    public function getEmbedded(): iterable;
 }

@@ -28,7 +28,7 @@ interface HydratableInterface
      *
      * @param array $keys (Optional) List of specific keys to extract
      *
-     * @return array The extracted data
+     * @return iterable The extracted data
      */
-    public function extract(array $keys = []): array;
+    public function extract(array $keys = []): iterable;
 }

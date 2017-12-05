@@ -23,10 +23,10 @@ interface TransformerInterface
      * return.
      *
      * @param Hydratable $hydratable Entity to hydrate
-     * @param array $includes Types of entities to include
-     * @param array $fields assoc array with name of included resource and list of fields to include
+     * @param iterable $includes Types of entities to include
+     * @param iterable $fields assoc array with name of included resource and list of fields to include
      *
      * @return EntityInterface An entity interface representing the object
      */
-    public function transform(Hydratable $hydratable, array $includes = [], array $fields = []): Entity;
+    public function transform(Hydratable $hydratable, iterable $includes = [], iterable $fields = []): Entity;
 }

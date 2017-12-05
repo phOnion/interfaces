@@ -14,15 +14,15 @@ interface NotAllowedException extends \Throwable
     /**
      * Sets the methods that ARE supported by the method
      *
-     * @param array $methods
+     * @param iterable $methods
      *
      * @return void
      */
-    public function setAllowedMethods(array $methods);
+    public function setAllowedMethods(iterable $methods): void;
     /**
      * Returns the list of methods supported by the route
      *
-     * @return array
+     * @return iterable
      */
-    public function getAllowedMethods(): array;
+    public function getAllowedMethods(): iterable;
 }

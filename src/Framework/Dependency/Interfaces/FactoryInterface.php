@@ -23,7 +23,7 @@ interface FactoryInterface
      *
      * @param Container $container
      *
-     * @return mixed
+     * @return object
      */
-    public function build(Container $container);
+    public function build(Container $container, Container $delegate = null): object;
 }

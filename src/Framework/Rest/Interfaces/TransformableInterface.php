@@ -4,5 +4,5 @@ namespace Onion\Framework\Rest\Interfaces;
 
 interface TransformableInterface
 {
-    public function transform(array $includes = [], array $fields = []): EntityInterface;
+    public function transform(iterable $includes = [], iterable $fields = []): EntityInterface;
 }
