@@ -1,5 +1,6 @@
 <?php declare(strict_types=1);
 namespace Onion\Framework\Router\Interfaces;
+
 /**
  * Interface ParserInterface
  * Interface to provide the skeleton structure of a parser that can be used
