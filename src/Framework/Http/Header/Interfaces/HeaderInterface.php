@@ -3,5 +3,8 @@ namespace Onion\Framework\Http\Header\Interfaces;
 
 interface HeaderInterface
 {
-    public function __construct(string $headerLine);
+    public function getName(): string;
+    public function getRawValue(): string;
+
+    public function __toString(): string;
 }
