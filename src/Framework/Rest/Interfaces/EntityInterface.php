@@ -125,7 +125,7 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      *
      * @return EntityInterface New immutable instance
      */
-    public function addEmbedded(string $type, EntityInterface $entity, bool $collection = true): EntityInterface;
+    public function withEmbedded(string $type, EntityInterface $entity, bool $collection = true): EntityInterface;
 
     /**
      * Returns all attached child entities in an iterable like:
