@@ -3,6 +3,8 @@ namespace Onion\Framework\Router\Interfaces;
 
 use Onion\Framework\Hydrator\Interfaces\HydratableInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
 
 interface RouteInterface extends HydratableInterface
 {
@@ -36,4 +38,6 @@ interface RouteInterface extends HydratableInterface
 
     /** Attempt to match the route against $path */
     public function isMatch(string $path): bool;
+    /** Dispatch the current middleware stack */
+    public function dispatch(ServerRequestInterface $request): ResponseInterface;
 }
