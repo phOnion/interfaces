@@ -5,6 +5,18 @@ use Psr\Http\Message;
 
 interface RouterInterface extends \Countable, \IteratorAggregate
 {
+    const SUPPORTED_METHODS = [
+        'CONNECT',
+        'DELETE',
+        'GET',
+        'HEAD',
+        'OPTIONS',
+        'PATCH',
+        'POST',
+        'PUT',
+        // 'TRACE', // Ignored due to possible security issues
+    ];
+
     /**
      *
      * @api
