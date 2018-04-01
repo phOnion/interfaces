@@ -3,6 +3,7 @@ namespace Onion\Framework\Application\Interfaces;
 
 use Onion\Framework\Dependency\Interfaces\FactoryInterface;
 use Psr\Container\ContainerInterface as Container;
+use Psr\Http\Server\RequestHandlerInterface;
 
 /**
  * Special-case interface indicating the the factory is
@@ -18,5 +19,5 @@ interface ModuleInterface extends FactoryInterface
      *
      * @return ApplicationInterface
      */
-    public function build(Container $container): ApplicationInterface;
+    public function build(Container $container): RequestHandlerInterface;
 }
