@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 namespace Onion\Framework\Router\Interfaces;
 
-use Onion\Framework\Hydrator\Interfaces\HydratableInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Onion\Framework\Hydrator\Interfaces\HydratableInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -14,9 +14,7 @@ interface RouteInterface extends HydratableInterface
     public function getMethods(): iterable;
     /** Get the pattern of the route */
     public function getPattern(): string;
-    /** Get the request handler of the route middleware */
     public function getRequestHandler(): RequestHandlerInterface;
-    /** Get the route parameters(if any) */
     public function getParameters(): iterable;
 
     /** Check if the route has a name */
@@ -38,6 +36,4 @@ interface RouteInterface extends HydratableInterface
 
     /** Attempt to match the route against $path */
     public function isMatch(string $path): bool;
-    /** Dispatch the current middleware stack */
-    public function dispatch(ServerRequestInterface $request): ResponseInterface;
 }

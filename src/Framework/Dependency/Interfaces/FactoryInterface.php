@@ -25,5 +25,5 @@ interface FactoryInterface
      *
      * @return object
      */
-    public function build(Container $container, Container $delegate = null): object;
+    public function build(Container $container);
 }
