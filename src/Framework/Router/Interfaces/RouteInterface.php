@@ -22,16 +22,10 @@ interface RouteInterface extends HydratableInterface
     /** Check if a route supports a specific method */
     public function hasMethod(string $method): bool;
 
-    /** Add the name of the route */
-    public function withName(string $name): self;
-    /** Add the pattern of the route */
-    public function withPattern(string $pattern): self;
     /** Add methods that are supported by the route */
     public function withMethods(iterable $methods): self;
     /** Attach the request handler for the route */
     public function withRequestHandler(RequestHandlerInterface $requestHandler): self;
-    /** Attach parameters to the route */
-    public function withParameters(iterable $parameters): void;
 
     /** Attempt to match the route against $path */
     public function isMatch(string $path): bool;
