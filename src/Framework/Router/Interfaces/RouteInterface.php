@@ -2,11 +2,10 @@
 namespace Onion\Framework\Router\Interfaces;
 
 use Psr\Http\Server\RequestHandlerInterface;
-use Onion\Framework\Hydrator\Interfaces\HydratableInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-interface RouteInterface extends HydratableInterface
+interface RouteInterface extends RequestHandlerInterface
 {
     /** Get the readable name of the route */
     public function getName(): string;
