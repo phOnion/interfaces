@@ -27,7 +27,7 @@ interface RouteInterface extends RequestHandlerInterface
     /** Attach the request handler for the route */
     public function withRequestHandler(RequestHandlerInterface $requestHandler): self;
     /** Add headers to the after execution */
-    public function withHeaders(iterable $headers): self
+    public function withHeaders(iterable $headers): self;
 
     /** Attempt to match the route against $path */
     public function isMatch(string $path): bool;
