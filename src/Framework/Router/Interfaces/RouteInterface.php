@@ -15,6 +15,7 @@ interface RouteInterface extends RequestHandlerInterface
     public function getPattern(): string;
     public function getRequestHandler(): RequestHandlerInterface;
     public function getParameters(): iterable;
+    public function getHeaders(): iterable;
 
     /** Check if the route has a name */
     public function hasName(): bool;
@@ -25,6 +26,8 @@ interface RouteInterface extends RequestHandlerInterface
     public function withMethods(iterable $methods): self;
     /** Attach the request handler for the route */
     public function withRequestHandler(RequestHandlerInterface $requestHandler): self;
+    /** Add headers to the after execution */
+    public function withHeaders(iterable $headers): self
 
     /** Attempt to match the route against $path */
     public function isMatch(string $path): bool;
