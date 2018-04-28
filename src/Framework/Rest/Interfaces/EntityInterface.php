@@ -121,11 +121,10 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      *
      * @param string $type Type of the relation/field name
      * @param EntityInterface $entity The entity to be attached
-     * @param bool $collection If the current entity is a collection or not
      *
      * @return EntityInterface New immutable instance
      */
-    public function withEmbedded(string $type, EntityInterface $entity, bool $collection = true): EntityInterface;
+    public function withEmbedded(string $type, EntityInterface $entity): EntityInterface;
 
     /**
      * Returns all attached child entities in an iterable like:
