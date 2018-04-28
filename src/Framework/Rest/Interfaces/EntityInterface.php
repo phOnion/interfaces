@@ -127,6 +127,12 @@ interface EntityInterface extends EvolvableLinkProviderInterface
     public function withEmbedded(string $type, EntityInterface $entity): EntityInterface;
 
     /**
+     * Remove all embedded items from the given type/relation. Must preserve
+     * immutability of the entity.
+     */
+    public function withoutEmbedded(string $type): EntityInterface;
+
+    /**
      * Returns all attached child entities in an iterable like:
      * ```
      * [
@@ -145,7 +151,7 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      *     // ...
      * ]
      * ```
-     * @return EntityInterface[][]|EntityInterface[]
+     * @return EntityInterface[]|EntityInterface[]
      */
     public function getEmbedded(): iterable;
 }
