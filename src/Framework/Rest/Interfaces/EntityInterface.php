@@ -136,22 +136,11 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      * Returns all attached child entities in an iterable like:
      * ```
      * [
-     *     'relation' => [
-     *         EntityInterface,
-     *         EntityInterface,
-     *         EntityInterface
-     *          // ..
-     *     ]
-     * ]
-     * ```
-     * or if the relation contains only one entity
-     * ```
-     * [
      *     'relation' => EntityInterface,
      *     // ...
      * ]
      * ```
-     * @return EntityInterface[]|EntityInterface[]
+     * @return EntityInterface[]
      */
     public function getEmbedded(): iterable;
 }
