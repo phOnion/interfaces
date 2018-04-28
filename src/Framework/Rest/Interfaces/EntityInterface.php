@@ -143,4 +143,6 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      * @return EntityInterface[]
      */
     public function getEmbedded(): iterable;
+
+    public function hasEmbedded(): bool;
 }
