@@ -20,14 +20,6 @@ interface EntityInterface extends EvolvableLinkProviderInterface
     public function getRel(): string;
 
     /**
-     * Allowing to use a "meta" object that is handled
-     * differently in order to represent errors
-     *
-     * @return bool
-     */
-    public function isError(): bool;
-
-    /**
      * Should be used in such a way that it overwrites all
      * previously set meta-data with the provided one. Must
      * be implemented in a way that preserves object immutability.
