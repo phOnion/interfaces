@@ -14,14 +14,13 @@ interface RouteInterface extends RequestHandlerInterface
     public function getRequestHandler(): RequestHandlerInterface;
     public function getParameters(): iterable;
     public function getHeaders(): iterable;
+    /** Retrieve a single parameter if it exists */
     public function getParameter(string $name, $default = null);
 
     /** Check if the route has a name */
     public function hasName(): bool;
     /** Check if a route supports a specific method */
     public function hasMethod(string $method): bool;
-    /** Retrieve a single parameter if it exists */
-
 
     /** Add methods that are supported by the route */
     public function withMethods(iterable $methods): self;
