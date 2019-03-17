@@ -2,8 +2,6 @@
 namespace Onion\Framework\Router\Interfaces;
 
 use Psr\Http\Server\RequestHandlerInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Message\ResponseInterface;
 
 interface RouteInterface extends RequestHandlerInterface
 {
@@ -28,7 +26,6 @@ interface RouteInterface extends RequestHandlerInterface
     public function withRequestHandler(RequestHandlerInterface $requestHandler): self;
     /** Add headers to the after execution */
     public function withHeaders(iterable $headers): self;
-
-    /** Attempt to match the route against $path */
-    public function isMatch(string $path): bool;
+    /** Add parameters to the route */
+    public function withParameters(): self;
 }
