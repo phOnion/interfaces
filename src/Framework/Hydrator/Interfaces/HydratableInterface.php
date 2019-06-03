@@ -11,6 +11,10 @@ namespace Onion\Framework\Hydrator\Interfaces;
  */
 interface HydratableInterface
 {
+    public const USE_SNAKE_CASE = 1;
+    public const USE_RAW_KEYS = 2;
+    public const EXTRACT_ALT_GETTERS = 4;
+
     /**
      * Populates the current object with the provided data, according to
      * the used strategy
