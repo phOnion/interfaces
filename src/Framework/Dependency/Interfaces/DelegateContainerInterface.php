@@ -1,7 +1,9 @@
 <?php
 namespace Onion\Framework\Dependency\Interfaces;
 
-interface DelegateContainerInterface
+use Psr\Container\ContainerInterface;
+
+interface DelegateContainerInterface extends ContainerInterface
 {
     public function attach(AttachableContainer $container): void;
 }
