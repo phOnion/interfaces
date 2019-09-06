@@ -15,6 +15,7 @@ interface HydratableInterface
     public const USE_RAW_KEYS = 2;
     public const EXTRACT_ALT_GETTERS = 4;
     public const EXCLUDE_EMPTY = 1024;
+    public const PRESERVE_CASE = 2048;
 
     /**
      * Populates the current object with the provided data, according to
