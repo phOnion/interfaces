@@ -116,13 +116,13 @@ interface EntityInterface extends EvolvableLinkProviderInterface
      *
      * @return EntityInterface New immutable instance
      */
-    public function withEmbedded(EntityInterface $entity): EntityInterface;
+    public function withEmbedded(TransformableInterface $entity): EntityInterface;
 
     /**
      * Remove all embedded items from the given type/relation. Must preserve
      * immutability of the entity.
      */
-    public function withoutEmbedded(EntityInterface $entity): EntityInterface;
+    public function withoutEmbedded(TransformableInterface $entity): EntityInterface;
 
     /**
      * Returns all attached child entities as an iterable
