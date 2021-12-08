@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Onion\Framework\Proxy\Interfaces;
 
-use Laminas\Code\Generator\ClassGenerator;
+use Laminas\Code\Generator\GeneratorInterface;
 
 interface WriterInterface
 {
-    public function save(ClassGenerator $reflection): bool;
+    public function save(GeneratorInterface $reflection): bool;
 }
