@@ -2,8 +2,6 @@
 
 namespace Onion\Framework\Loop\Interfaces;
 
-use Onion\Framework\Loop\Channel;
-
 interface TaskInterface
 {
     public function run();
