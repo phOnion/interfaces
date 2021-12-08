@@ -6,16 +6,13 @@ namespace Onion\Framework\Collection\Interfaces;
 
 use ArrayAccess;
 use Countable;
+use Onion\Framework\Collection\Types\{
+    CollectionPad,
+    CollectionPart
+};
 
 interface CollectionInterface extends \Iterator, ArrayAccess, Countable
 {
-    public const USE_VALUES_ONLY = 1;
-    public const USE_KEYS_ONLY = 2;
-    public const USE_BOTH = self::USE_KEYS_ONLY | self::USE_VALUES_ONLY;
-
-    public const PAD_LEFT = 3;
-    public const PAD_RIGHT = 4;
-
     public function map(callable $callback): static;
     public function filter(callable $callback): static;
     public function sort(callable $callback, string $sortFunction = "usort"): static;
@@ -39,8 +36,8 @@ interface CollectionInterface extends \Iterator, ArrayAccess, Countable
     public function contains(mixed $item): bool;
     public function intersect(iterable ...$elements);
     public function diff(iterable ...$elements);
-    public function combine(iterable $values, int $mode = self::USE_VALUES_ONLY);
-    public function pad(int $length, mixed $padding, int $direction = self::PAD_RIGHT);
+    public function combine(iterable $values, CollectionPart $mode = CollectionPart::BOTH);
+    public function pad(int $length, mixed $padding, CollectionPad $direction = CollectionPad::RIGHT);
     public function reverse(): static;
     public function flip(): static;
     public function validate(callable $callback): bool;
