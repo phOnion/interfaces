@@ -2,9 +2,9 @@
 
 namespace Onion\Framework\Loop\Interfaces;
 
-use Onion\Framework\Loop\Interfaces\AsyncResourceInterface;
+use Onion\Framework\Loop\Interfaces\ResourceInterface;
 
-interface SocketInterface extends AsyncResourceInterface
+interface SocketInterface extends ResourceInterface
 {
     public function accept(): ResourceInterface;
 }
