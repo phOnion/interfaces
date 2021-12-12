@@ -5,7 +5,7 @@ namespace Onion\Framework\Loop\Interfaces;
 interface TaskInterface
 {
     public function run();
-    public function suspend(mixed $value = null): mixed;
+    public function suspend(mixed $value = null): void;
     public function resume(mixed $value = null): bool;
     public function kill(): void;
 

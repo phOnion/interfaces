@@ -12,10 +12,8 @@ interface CoroutineInterface
     public function throw(Throwable $exception): void;
     public function run(): mixed;
     public function valid(): bool;
+    public function suspend(mixed $value): void;
     public static function task(): TaskInterface;
-
-    public function suspend(mixed $value): mixed;
-    public function resume(mixed $value): mixed;
     public function isRunning(): bool;
     public function isTerminated(): bool;
     public function isPaused(): bool;
