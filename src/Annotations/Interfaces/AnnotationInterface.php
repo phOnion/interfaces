@@ -6,5 +6,4 @@ namespace Onion\Framework\Annotations\Interfaces;
 
 interface AnnotationInterface
 {
-
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Onion\Framework\Server\Interfaces;
+declare(strict_types=1);
 
-use Onion\Framework\Loop\Coroutine;
+namespace Onion\Framework\Server\Interfaces;
 
 interface ServerInterface
 {

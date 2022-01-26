@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Onion\Framework\Server\Interfaces;
 
 interface ContextInterface

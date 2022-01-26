@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Onion\Framework\Client\Interfaces;
 
 use Onion\Framework\Promise\Interfaces\PromiseInterface;

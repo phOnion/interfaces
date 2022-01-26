@@ -6,8 +6,8 @@ namespace Onion\Framework\Aspects\Types;
 
 enum PropertyAccess: string
 {
-    case GET = 'get';
-    case SET = 'set';
-    case UNSET = 'unset';
-    case ISSET = 'isset';
-}
+case GET = 'get';
+case SET = 'set';
+case unset = 'unset';
+case isset = 'isset';
+    }

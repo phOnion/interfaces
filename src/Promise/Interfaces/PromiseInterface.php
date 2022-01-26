@@ -1,7 +1,8 @@
 <?php
 
-namespace Onion\Framework\Promise\Interfaces;
+declare(strict_types=1);
 
+namespace Onion\Framework\Promise\Interfaces;
 
 interface PromiseInterface extends ThenableInterface
 {
