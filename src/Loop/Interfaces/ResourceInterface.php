@@ -23,5 +23,10 @@ interface ResourceInterface
     public function getResource();
     public function getResourceId(): int;
 
+    public function eof(): bool;
+    /**
+     * @deprecated
+     * @see ResourceInterface::eof
+     */
     public function isAlive(): bool;
 }
