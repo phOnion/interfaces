@@ -8,8 +8,8 @@ use Onion\Framework\Loop\Types\Operation;
 
 interface ResourceInterface
 {
-    public function read(int $size, int $flags = 0): string;
-    public function write(string $data, int $flags = 0): int;
+    public function read(int $size): string;
+    public function write(string $data): int;
     public function close(): bool;
 
     public function block(): bool;
