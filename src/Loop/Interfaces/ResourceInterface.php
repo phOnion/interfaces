@@ -29,4 +29,5 @@ interface ResourceInterface
      * @see ResourceInterface::eof
      */
     public function isAlive(): bool;
+    public function detach(): mixed;
 }
