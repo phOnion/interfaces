@@ -7,5 +7,5 @@ namespace Onion\Framework\Promise\Interfaces;
 interface PromiseInterface extends ThenableInterface
 {
     public function catch(callable $onRejected): static;
-    public function finally(callable ...$final): static;
+    public function finally(callable $onFinally): static;
 }
