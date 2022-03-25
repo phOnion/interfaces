@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Onion\Framework\Dependency\Interfaces;
 
+use Closure;
 use Psr\Container\ContainerInterface as Container;
 
 /**
@@ -22,7 +23,7 @@ interface FactoryBuilderInterface
      * @param Container $container
      * @param string $key
      *
-     * @return FactoryInterface
+     * @return FactoryInterface|Closure
      */
-    public function build(Container $container, string $key): FactoryInterface;
+    public function build(Container $container, string $key): FactoryInterface | Closure;
 }
