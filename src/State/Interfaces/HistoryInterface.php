@@ -8,5 +8,5 @@ use Traversable;
 
 interface HistoryInterface extends Traversable
 {
-    public function add(TransitionInterface $transition): void;
+    public function add(string $from, string $to, array $arguments): void;
 }
