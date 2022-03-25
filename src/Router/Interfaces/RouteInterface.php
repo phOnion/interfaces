@@ -23,5 +23,4 @@ interface RouteInterface extends RequestHandlerInterface
     public function withRequestHandler(RequestHandlerInterface $requestHandler): self;
     public function withHeaders(array $headers): self;
     public function withParameters(array $parameters): self;
-    public function withPreload(string $uri, array $params): self;
 }
