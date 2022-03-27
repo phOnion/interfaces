@@ -25,7 +25,7 @@ interface NotAllowedException extends \Throwable
     /**
      * Returns the list of methods supported by the route
      *
-     * @return iterable
+     * @return array
      */
-    public function getAllowedMethods(): iterable;
+    public function getAllowedMethods(): array;
 }
