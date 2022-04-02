@@ -14,7 +14,6 @@ interface SchedulerInterface
 
     public function onRead(ResourceInterface $resource, TaskInterface $task): void;
     public function onWrite(ResourceInterface $resource, TaskInterface $task): void;
-    public function onError(ResourceInterface $resource, TaskInterface $task): void;
 
     public function start(): void;
 }
