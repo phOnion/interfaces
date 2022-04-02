@@ -8,5 +8,4 @@ enum Operation
 {
 case READ;
 case WRITE;
-case ERROR;
     }
