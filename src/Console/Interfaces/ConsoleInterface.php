@@ -28,4 +28,8 @@ interface ConsoleInterface
         array $options,
         string $default = ''
     ): string;
+
+    public function overwrite(string $content = ''): void;
+    public function showCursor(): void;
+    public function hideCursor(): void;
 }
