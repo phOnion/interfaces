@@ -4,7 +4,19 @@ declare(strict_types=1);
 
 namespace Onion\Framework\Promise\Interfaces;
 
+use Closure;
+
 interface ThenableInterface
 {
-    public function then(?callable $onFulfilled = null, ?callable $onRejected = null): static;
+    /**
+     * Sets functions used to handle promise resolution or rejection
+     *
+     * @param null|callable $onFulfilled
+     * @param null|callable $onRejected
+     * @return static
+     */
+    public function then(
+        ?Closure $onFulfilled = null,
+        ?Closure $onRejected = null,
+    ): static;
 }
