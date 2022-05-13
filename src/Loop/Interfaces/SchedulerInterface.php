@@ -10,7 +10,7 @@ use Onion\Framework\Loop\Interfaces\ResourceInterface;
 interface SchedulerInterface
 {
     public function add(CoroutineInterface $coroutine): TaskInterface;
-    public function schedule(TaskInterface $task): void;
+    public function schedule(TaskInterface $task, int $at = null): void;
 
     public function onRead(ResourceInterface $resource, TaskInterface $task): void;
     public function onWrite(ResourceInterface $resource, TaskInterface $task): void;
