@@ -23,7 +23,7 @@ interface ContextFactoryInterface extends FactoryInterface
      * @param Container $container
      * @param string $key
      *
-     * @return FactoryInterface|Closure
+     * @return mixed
      */
     public function build(Container $container, string $key = null): mixed;
 }
