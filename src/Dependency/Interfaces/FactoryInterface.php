@@ -28,5 +28,5 @@ interface FactoryInterface
      *
      * @return object
      */
-    public function build(Container $container);
+    public function build(Container $container): mixed;
 }
