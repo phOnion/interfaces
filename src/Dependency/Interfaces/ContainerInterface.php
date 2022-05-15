@@ -16,5 +16,7 @@ interface ContainerInterface extends PsrContainerInterface
     public function singleton(string $id, string|Closure|FactoryInterface $binding): static;
     public function bind(string $id, string|Closure|FactoryInterface $binding): static;
 
+    public function alias(string $alias, string $identifier): static;
+
     public function extend(string $className, Closure $decorator): static;
 }
