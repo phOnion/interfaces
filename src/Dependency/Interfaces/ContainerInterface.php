@@ -40,7 +40,7 @@ interface ContainerInterface extends PsrContainerInterface
      * every request
      *
      * @param string $service The identifier of the dependency
-     * @param string|object $binding A string representing the concrete
+     * @param string|Closure|FactoryInterface $binding A string representing the concrete
      * implementation or the identifier in one of the attached containers
      * (if any), an instance of FactoryInterface/ContextFactoryInterface
      * to use as a factory that will build the instance or a closure
