@@ -31,7 +31,7 @@ interface ContainerInterface extends PsrContainerInterface
      *
      * @return static
      */
-    public function singleton(string $service, string|object $binding): static;
+    public function singleton(string $service, string|object $binding, array $tags = []): static;
 
     /**
      * Registers a dependency identified by $service with the container as
@@ -48,7 +48,25 @@ interface ContainerInterface extends PsrContainerInterface
      *
      * @return static
      */
-    public function bind(string $service, string|Closure|FactoryInterface $binding): static;
+    public function bind(string $service, string|Closure|FactoryInterface $binding, array $tags = []): static;
+
+    /**
+     * Add tags to a service
+     *
+     * @param string $service The service name
+     * @param string[] $tags A list of tags
+     * @return void
+     */
+    public function tag(string $service, string ...$tags): void;
+
+    /**
+     * Retrieve a group of dependencies based one of their tags
+     *
+     * @param string $tag
+     * @return iterable
+     */
+    public function tagged(string $name): iterable;
+
 
     /**
      * Register an alias for a $service to allow retrieval by it. This
