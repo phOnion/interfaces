@@ -14,7 +14,7 @@ interface ChannelInterface
      * @return bool True on success or false if the channel has been
      * closed
      */
-    public function send(mixed $data): bool;
+    public function send(mixed ...$data): bool;
 
     /**
      * Receive data from the channel, if any is available
