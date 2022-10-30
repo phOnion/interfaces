@@ -6,6 +6,12 @@ use Onion\Framework\Loop\Interfaces\ResourceInterface;
 
 interface ClientInterface
 {
+    public static function connect(
+        string $address,
+        ?float $timeout,
+        ContextInterface ...$context,
+    ): ResourceInterface;
+
     public static function send(
         string $address,
         string $data,
