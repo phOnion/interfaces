@@ -61,4 +61,9 @@ interface SchedulerInterface
      * @return void
      */
     public function start(): void;
+
+    /**
+     * Stops the event loop after completing the current tick
+     */
+    public function stop(): void;
 }
