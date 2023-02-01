@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Onion\Framework\Loop\Interfaces;
 
+use Onion\Framework\Promise\Interfaces\DeferredInterface;
+use Onion\Framework\Promise\Interfaces\PromiseInterface;
 use Throwable;
 
 interface TaskInterface
@@ -38,7 +40,7 @@ interface TaskInterface
      *
      * @return bool if the exception will successfully be thrown in the coroutine
      */
-    public function throw(\Throwable $exception): bool;
+    public function throw(Throwable $exception): bool;
 
     /**
      * Checks if the current task has finished executing
@@ -60,4 +62,12 @@ interface TaskInterface
      * @return bool
      */
     public function isKilled(): bool;
+
+    /**
+     * Retrieve a deferred for the task execution. Allows access to the
+     * result of the task via the `promise()` method or its exception.
+     *
+     * @return DeferredInterface
+     */
+    public function deferred(): DeferredInterface;
 }
