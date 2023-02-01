@@ -70,4 +70,13 @@ interface TaskInterface
      * @return DeferredInterface
      */
     public function deferred(): DeferredInterface;
+
+    /**
+     * Force the coroutine to 'sync' forcing its parent coroutine to
+     * halt until the current one completes, making it behave like a
+     * synchronous of regular PHP code and avoiding the callback/promise hell.
+     *
+     * @return mixed The return value of the coroutine
+     */
+    public function sync(): mixed;
 }
