@@ -12,14 +12,6 @@ use Onion\Framework\Loop\Interfaces\ResourceInterface;
 interface SchedulerInterface
 {
     /**
-     * Add a coroutine to the task queue
-     *
-     * @param CoroutineInterface $coroutine
-     * @return TaskInterface
-     */
-    public function add(CoroutineInterface $coroutine): TaskInterface;
-
-    /**
      * Schedule a task for execution either during at the earliest tick
      * or at a given time if the $at parameter is provided.
      *
