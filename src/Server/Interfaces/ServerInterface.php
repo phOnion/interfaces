@@ -6,12 +6,7 @@ namespace Onion\Framework\Server\Interfaces;
 
 interface ServerInterface
 {
-    public function attach(
-        DriverInterface $driver,
-        string $address,
-        ?int $port = null,
-        ContextInterface ...$contexts
-    ): void;
+    public function attach(DriverInterface $driver): void;
 
     public function start(): void;
 }
