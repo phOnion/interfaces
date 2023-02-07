@@ -17,5 +17,5 @@ interface SocketInterface extends ResourceInterface
      * @return ResourceInterface A new resource that represents the
      * accepted connection
      */
-    public function accept(): ResourceInterface;
+    public function accept(?int $timeout = null): ResourceInterface;
 }
