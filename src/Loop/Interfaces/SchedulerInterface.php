@@ -46,6 +46,20 @@ interface SchedulerInterface
     public function onWrite(ResourceInterface $resource, TaskInterface $task): void;
 
     /**
+     * Registers a signal handler for the given $signal. The handler
+     * is added as part of the loop and in cases where the signal is
+     * a termination signal, the loop must be stopped from the handler
+     * itself, by using `stop()`.
+     *
+     * @param int $signal The signal to listen for
+     * @param TaskInterface $task The task to execute when the signal is
+     * received.
+     *
+     * @return void
+     */
+    public function signal(int $signal, TaskInterface $task): void;
+
+    /**
      * Starts the event loop execution cycle. All code written after
      * a call to this method will be executed as soon as there are no
      * scheduled tasks, timers and watched resources
