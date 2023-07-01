@@ -79,4 +79,14 @@ interface TaskInterface
      * @return mixed The return value of the coroutine
      */
     public function sync(): mixed;
+
+    /**
+     * Automatic factory for replicating the current task. This is useful
+     * when you want to run the same task multiple times in parallel.
+     * Internally it is used to implement task persistance i.e have a
+     * single task run multiple times, most applicable to stream tasks,
+     * where an individual listener that is supposed to get triggered once
+     * every time a new connection is received.
+     */
+    public function spawn(): TaskInterface;
 }
