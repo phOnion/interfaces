@@ -87,6 +87,20 @@ interface TaskInterface
      * single task run multiple times, most applicable to stream tasks,
      * where an individual listener that is supposed to get triggered once
      * every time a new connection is received.
+     *
+     * The task returned by this method *MUST* not have it's `isPersistent()`
+     * method return true, otherwise it will cause an infinite loop of zombie
+     * tasks that are not referenced by user-land and there will be no way to
+     * interact with them.
      */
     public function spawn(): TaskInterface;
+
+    /**
+     * Indicate whether the task is persistent or not. A persistent task
+     * does not get registered to the loop directly but rather it is
+     * `spawn()`ed every time it is scheduled to run. In order to terminate
+     * a persistent task, the `kill()` method must be called on the which will
+     * prevent the task from being spawned again.
+     */
+    public function isPersistent(): bool;
 }
