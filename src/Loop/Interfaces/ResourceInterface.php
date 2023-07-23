@@ -51,34 +51,6 @@ interface ResourceInterface
     public function unblock(): bool;
 
     /**
-     * Attempt to acquire or release an already acquired lock on the
-     * underlying resource
-     *
-     * @param int $lockType Same as flock's $operation parameter
-     *
-     * @return bool Whether a lock has been acquired/released or not
-     */
-    public function lock(int $lockType = LOCK_NB | LOCK_SH): bool;
-
-    /**
-     * Attempt to release an already acquired lock on the underlying
-     * resource
-     *
-     * @return bool Whether a lock has been released or not
-     */
-    public function unlock(): bool;
-
-    /**
-     * Suspend the execution of the coroutine from which this method is
-     * called until the provided operation is possible on the current
-     * resource
-     *
-     * @param Operation $operation The operation to wait for
-     * @return void
-     */
-    public function wait(Operation $operation = Operation::READ): void;
-
-    /**
      * Returns the underlying resource
      *
      * @return resource
