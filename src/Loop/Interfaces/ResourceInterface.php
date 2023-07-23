@@ -97,11 +97,6 @@ interface ResourceInterface
      * @return bool
      */
     public function eof(): bool;
-    /**
-     * @deprecated
-     * @see ResourceInterface::eof
-     */
-    public function isAlive(): bool;
 
     /**
      * Detaches the underlying resource from the current object and
