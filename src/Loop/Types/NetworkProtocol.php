@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Onion\Framework\Loop\Types;
 
-enum LockType
+enum NetworkProtocols
 {
-    case SHARED;
-    case EXCLUSIVE;
+    case TCP;
+    case UDP;
 }
