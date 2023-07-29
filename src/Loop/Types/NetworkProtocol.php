@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Onion\Framework\Loop\Types;
 
-enum NetworkProtocols
+enum NetworkProtocol
 {
     case TCP;
     case UDP;
