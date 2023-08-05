@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Onion\Framework\Loop\Interfaces;
 
+use Closure;
 use Onion\Framework\Client\Interfaces\ContextInterface as ClientContext;
 use Onion\Framework\Loop\Types\NetworkAddress;
 use Onion\Framework\Server\Interfaces\ContextInterface as ServerContext;
